@@ -26,12 +26,12 @@ public class AccountController {
         return new AccountForm();
     }
 
-    @RequestMapping(path = "create", params = "form", method=RequestMethod.GET)
+    @RequestMapping(path = "create", params = "form", method = RequestMethod.GET)
     String createForm() {
         return "account/createForm";
     }
 
-    @RequestMapping(path = "create", method=RequestMethod.POST)
+    @RequestMapping(path = "create", method = RequestMethod.POST)
     String create(@Validated AccountForm accountForm, BindingResult result, RedirectAttributes attributes) {
         if (result.hasErrors()) {
             return "account/createForm";

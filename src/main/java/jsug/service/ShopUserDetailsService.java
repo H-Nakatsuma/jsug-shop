@@ -1,7 +1,7 @@
 package jsug.service;
 
-import jsug.repository.AccountRepository;
 import jsug.model.ShopUserDetails;
+import jsug.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,11 +1,11 @@
 package jsug.controller;
 
-import jsug.model.Cart;
-import jsug.model.Order;
 import jsug.component.exception.EmptyCartOrderException;
 import jsug.component.exception.InvalidCartOrderException;
-import jsug.service.OrderService;
+import jsug.model.Cart;
+import jsug.model.Order;
 import jsug.model.ShopUserDetails;
+import jsug.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

@@ -1,12 +1,12 @@
 package jsug.controller;
 
+import jsug.component.exception.GoodsNotFoundException;
 import jsug.controller.form.AddToCartForm;
 import jsug.model.Cart;
 import jsug.model.Category;
 import jsug.model.Goods;
 import jsug.model.OrderLine;
 import jsug.service.CategoryService;
-import jsug.component.exception.GoodsNotFoundException;
 import jsug.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -35,7 +35,7 @@ public class GoodsController {
     Cart cart;
 
     @ModelAttribute("categories")
-    List<Category>  getCategories() {
+    List<Category> getCategories() {
         return categoryService.findAll();
     }
 
@@ -44,8 +44,8 @@ public class GoodsController {
         return new AddToCartForm();
     }
 
-    @RequestMapping(path="/")
-    String showGoods (@RequestParam(defaultValue = "1") Integer categoryId, @PageableDefault Pageable pageable, Model model) {
+    @RequestMapping(path = "/")
+    String showGoods(@RequestParam(defaultValue = "1") Integer categoryId, @PageableDefault Pageable pageable, Model model) {
         Page<Goods> page = goodsService.findByCategoryId(categoryId, pageable);
         model.addAttribute("page", page);
         model.addAttribute("categoryId", categoryId);
@@ -66,10 +66,10 @@ public class GoodsController {
         return "redirect:/cart";
     }
 
-    @ExceptionHandler(GoodsNotFoundException.class) // (1)
-    @ResponseStatus(HttpStatus.NOT_FOUND) // (2)
+    @ExceptionHandler(GoodsNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     String handleGoodsNotFoundException() {
-        return "goods/notFound"; // (3)
+        return "goods/notFound";
     }
 
 }
