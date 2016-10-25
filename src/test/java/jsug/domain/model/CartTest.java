@@ -1,5 +1,8 @@
 package jsug.domain.model;
 
+import jsug.model.Cart;
+import jsug.model.Goods;
+import jsug.model.OrderLine;
 import org.junit.Test;
 
 import java.util.HashSet;

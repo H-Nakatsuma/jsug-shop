@@ -1,7 +1,8 @@
 package jsug.domain.service.userdetails;
 
 import jsug.domain.TestConfig;
-import jsug.domain.model.Account;
+import jsug.model.Account;
+import jsug.model.ShopUserDetails;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;

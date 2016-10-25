@@ -1,7 +1,10 @@
 package jsug.domain.service.order;
 
 import jsug.domain.TestConfig;
-import jsug.domain.model.*;
+import jsug.model.*;
+import jsug.component.exception.EmptyCartOrderException;
+import jsug.component.exception.InvalidCartOrderException;
+import jsug.service.OrderService;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;

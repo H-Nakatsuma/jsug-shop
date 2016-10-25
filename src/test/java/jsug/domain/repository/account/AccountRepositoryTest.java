@@ -1,7 +1,8 @@
 package jsug.domain.repository.account;
 
-import jsug.domain.model.Account;
+import jsug.model.Account;
 import jsug.domain.TestConfig;
+import jsug.repository.AccountRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

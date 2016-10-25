@@ -1,7 +1,9 @@
 package jsug.domain.service.goods;
 
 import jsug.domain.TestConfig;
-import jsug.domain.model.Goods;
+import jsug.model.Goods;
+import jsug.component.exception.GoodsNotFoundException;
+import jsug.service.GoodsService;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
